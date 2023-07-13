@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import VideoDetail from "pages/VideoDetail";
-import Videos from "pages/Videos";
+import VideoDetail from "./pages/VideoDetail";
+import Videos from "./pages/Videos";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Videos /> },
       { path: "/videos", element: <Videos /> },
-      { path: "/videos/:keyword", element: <Videos /> },
-      { path: "/videos/watch/:id", element:<VideoDetail />}
+      { path: "/videos/:searchKeyword", element: <Videos /> },
+      { path: "/videos/watch/:videoId", element:<VideoDetail />}
     ],
   },
 ]);
